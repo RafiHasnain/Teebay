@@ -13,6 +13,9 @@ const ProductList = React.lazy(() => import("./pages/ProductList"));
 const CreateProduct = React.lazy(() => import("./pages/CreateProduct"));
 const AllProductsList = React.lazy(() => import("./pages/AllProductsList"));
 const BuyAndRent = React.lazy(() => import("./pages/BuyAndRent"));
+const BoughtSoldBorrowLent = React.lazy(() =>
+  import("./pages/BoughtSoldBorrowLent")
+);
 
 const App = () => {
   const loading = () => <div>Loading...</div>;
@@ -29,6 +32,10 @@ const App = () => {
           <Route path='/create-product' component={CreateProduct} />
           <Route path='/all-product-list' component={AllProductsList} />
           <Route path='/buy-and-rent' component={BuyAndRent} />
+          <Route
+            path='/bought-sold-borrow-lent'
+            component={BoughtSoldBorrowLent}
+          />
         </Suspense>
       </Switch>
     </Router>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Header, Grid, Form, Item, Icon } from "semantic-ui-react";
-import DeleteProduct from "./DeleteProduct";
+import BuyProduct from "./BuyProduct";
+import RentProduct from "./RentProduct";
 
 const BuyAndRent = () => {
   const [products, setProducts] = useState([
@@ -90,10 +91,8 @@ const BuyAndRent = () => {
                         maxWidth: "100vh",
                         margin: "0 auto",
                       }}>
-                      <Button style={{ marginRight: "20x" }} color={"violet"}>
-                        Rent
-                      </Button>
-                      <Button color={"violet"}>Buy</Button>
+                      <RentProduct />
+                      <BuyProduct />
                     </div>
                   </div>
                 </Item.Content>
